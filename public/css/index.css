@@ -1,0 +1,255 @@
+body {
+  background-color: black;
+}
+
+input {
+  width: 200px;
+  height: 40px;
+}
+
+button {
+  background-color: #f7e600;
+  border: 1px solid yellow;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #202124;
+}
+
+span#title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.wrap {
+  background-color: white;
+}
+
+.container {
+  display: flex;
+}
+
+.flex_item {
+  padding: 15px;
+}
+
+.left_box {
+  background-color: #202124;
+  color: white;
+  width: 30%;
+  height: 100vh;
+}
+
+.write_box input#title {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.write_box textarea {
+  font-size: 1rem;
+  width: 100%;
+  height: 50vh;
+  padding: 10px;
+  resize: none;
+  outline: none;
+}
+
+.right_box {
+  width: 70%;
+}
+
+.memo_box {
+  display: grid;
+  justify-items: center;
+  overflow-y: auto; /* 스크롤 자동 생성 */
+  gap: 10px;
+  padding: 5px;
+}
+
+.memo_item {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* border: 1px solid gray; */
+  border-radius: 15px;
+  width: 15.5rem;
+  height: 15.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #f6f6f6;
+}
+
+.memo_text {
+  cursor: pointer;
+  height: calc(100% - 20px);
+}
+
+.memo_span {
+  height: 100%;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.memo_button {
+  text-align: end;
+  margin-bottom: 2%;
+}
+
+.memo_button i {
+  cursor: pointer;
+  margin-left: 2%;
+}
+
+div#file {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+div#file span {
+  font-size: 0.9rem;
+}
+
+div#file input {
+  height: 1.5rem;
+}
+
+button#memo_submit {
+  width: 100%;
+  height: 3rem;
+  background-color: #f7e600;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #202124;
+  margin-top: 0.5rem;
+}
+
+.popup-wrap {
+  background-color: rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  padding: 15px;
+}
+
+.popup {
+  width: 100%;
+  width: 80%;
+  height: 90%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #202124;
+  box-shadow: 5px 10px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+.popup-head {
+  width: 100%;
+  height: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.popup-body {
+  width: 100%;
+  height: 86%;
+  background-color: #ffffff;
+}
+
+.body-content {
+  width: 100%;
+  padding: 30px;
+  height: 100%;
+}
+
+.body-titlebox {
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.body-contentbox {
+  word-break: break-word;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.body-content div#title {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.body-content div#content {
+  font-size: 1.2rem;
+}
+
+.body-content div#file img {
+  max-width: 100%;
+}
+
+.popup-body > div > div {
+  padding-bottom: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.popup-body .body-content {
+  overflow-y: auto;
+}
+
+.popup-foot {
+  width: 100%;
+  height: 7%;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.pop-btn {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  cursor: pointer;
+  background-color: #f7e600;
+}
+
+.pop-btn.close i {
+  margin-right: 1%;
+}
+
+@media (max-width: 70rem) {
+  .memo_box {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 70rem) {
+  .memo_box {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 85rem) {
+  .memo_box {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

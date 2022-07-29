@@ -1,0 +1,68 @@
+<!-- 레이아웃 로드 -->
+{% extends 'layout.html' %}
+
+<!-- style 적용을 위한 style block -->
+{% block style %}
+<link rel="stylesheet" href="/css/todo.css" />
+{% endblock %}
+
+<!-- script 적용을 위한 script block -->
+{% block script %}
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/js/todo.js"></script>
+{% endblock %}
+
+<!-- body content block -->
+{% block content %}
+<!-- nav 바에 현재 페이지를 표시하기 위한 JS 코드 -->
+<script>
+  const navs = document.querySelectorAll("nav > div > a.nav-center");
+  navs[1].classList.add("active");
+</script>
+<div class="wrap">
+  <div class="container">
+    <div class="flex_item left_box">
+      <div class="write_box">
+        <form id="form">
+          <!-- 할 일 내용 입력창 -->
+          <input type="text" id="content" name="content" placeholder="할 일" />
+          <!-- 함께할 친구 선택창 -->
+          <select id="party">
+            <option value="">-- 친구 선택 --</option>
+          </select>
+          <!-- 함께할 친구 목록이 표시되는 창 -->
+          <div id="party_list"></div>
+          <!-- 할 일 추가를 위한 버튼 -->
+          <button id="memo_submit">할 일 추가</button>
+        </form>
+      </div>
+    </div>
+    <!-- 추가한 할 일이 표시되는 창 -->
+    <div class="flex_item right_box">
+      <div class="wrap_menu">
+        <!-- 할 일이 표시되는 창 -->
+        <div class="sec_wrapper" id="todo_wrapper">
+          <div class="menu" id="m_todo"><span>할 일</span></div>
+          <table>
+            <tbody></tbody>
+          </table>
+        </div>
+        <!-- 하는 중인 일이 표시되는 창 -->
+        <div class="sec_wrapper" id="doing_wrapper">
+          <div class="menu" id="m_doing"><span>하고 있는 일</span></div>
+          <table>
+            <tbody></tbody>
+          </table>
+        </div>
+        <!-- 한 일이 표시되는 창 -->
+        <div class="sec_wrapper" id="done_wrapper">
+          <div class="menu" id="m_done"><span>한 일</span></div>
+          <table>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

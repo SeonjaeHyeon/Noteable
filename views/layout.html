@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <!-- fontawesome 아이콘 사용을 위한 script -->
+    <script
+      src="https://kit.fontawesome.com/ecb8a71d9f.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- 모든 html 문서에 대해 적용하는 global stylesheet -->
+    <link rel="stylesheet" href="/css/global.css" />
+    {% block style %} {% endblock %} {% block script %} {% endblock %}
+  </head>
+  <body>
+    <!-- nav 바 -->
+    <!-- 메모 페이지(index), 할 일(todo), 내 정보(mypage) 페이지로 이동할 수 있음 -->
+    {% if name %}
+    <nav>
+      <span class="nav-brand nav-center">
+        <i class="far fa-sticky-note"></i>
+        Noteable
+      </span>
+      <div class="navbar-nav">
+        <a class="nav-font nav-center" href="/">메모</a>
+        <a class="nav-font nav-center" href="/todo">할 일</a>
+        <a class="nav-font nav-center" href="/mypage">내 정보</a>
+      </div>
+      <div class="navbar-right nav-center">
+        <span class="nav-font">{{ name }} 님</span>
+        <!-- 로그아웃 버튼 -->
+        <a href="/auth/signOut" id="logout">로그아웃</a>
+      </div>
+    </nav>
+    {% endif %} {% block content %} {% endblock %}
+  </body>
+</html>

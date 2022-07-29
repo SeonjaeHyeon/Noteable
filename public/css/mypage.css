@@ -1,0 +1,163 @@
+body {
+  background-color: black;
+}
+
+input.table_input {
+  width: 60%;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.searchBar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#searchQueryInput {
+  width: 100%;
+  height: 2.8rem;
+  background: #f5f5f5;
+  outline: none;
+  border: none;
+  border-radius: 1.625rem;
+  padding: 0 3.5rem 0 1.5rem;
+  font-size: 1rem;
+}
+
+#searchQuerySubmit {
+  width: 3.5rem;
+  height: 2.8rem;
+  margin-left: -3.5rem;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+#searchQuerySubmit:hover {
+  cursor: pointer;
+}
+
+button {
+  background-color: #f7e600;
+  border: 1px solid yellow;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #202124;
+}
+
+td button {
+  padding: 2%;
+}
+
+span#title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.wrap {
+  background-color: white;
+}
+
+.container {
+  display: flex;
+}
+
+.flex_item {
+  padding: 15px;
+}
+
+.left_box {
+  background-color: #202124;
+  color: white;
+  width: 30%;
+  height: 100vh;
+}
+
+.left_box h1 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.left_box div {
+  text-align: center;
+  padding: 10px;
+}
+
+.right_box {
+  width: 70%;
+}
+
+.wrap_menu {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.menu {
+  font-size: 21px;
+  font-weight: 600;
+  text-align: center;
+  margin: 3px 3px;
+  display: block;
+  color: #222;
+  width: 900px;
+  padding: 0.5rem 1.5rem;
+}
+
+div#my_info {
+  border-bottom: 2px solid black;
+}
+
+.sec_wrapper {
+  display: inline-block;
+}
+
+.table1 {
+  font-size: 1.2rem;
+  border-top: 2px solid #bdbdbd;
+  border-bottom: 2px solid #bdbdbd;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.table1 tbody {
+  vertical-align: middle;
+  border: 1px solid white;
+}
+
+.table1 th {
+  background: #f6f6f6;
+  width: 30%;
+  line-height: 2.5rem;
+}
+
+.table1 td {
+  background: #fff;
+  color: #5c5c5c;
+  line-height: 2.5rem;
+}
+
+button#info_submit {
+  width: 90px;
+  height: 2.7rem;
+  background-color: #f7e600;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #202124;
+  margin-top: 0.5rem;
+  float: right;
+}
+
+.table {
+  margin-top: 10px;
+  border-spacing: 0;
+}

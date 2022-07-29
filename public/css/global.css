@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "Gyeonggi Batang";
+  src: url("fonts/Gyeonggi_Batang_Regular.woff") format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gyeonggi Batang", sans-serif;
+}
+
+nav {
+  display: flex;
+  padding: 0.7rem;
+}
+
+.nav-brand {
+  font-size: 1.5rem;
+  margin-left: 0.8rem;
+  margin-right: 2rem;
+}
+
+nav i {
+  margin-right: 5px;
+}
+
+nav span {
+  color: white;
+}
+
+div.navbar-nav {
+  display: flex;
+  justify-content: space-around;
+  width: 23%;
+}
+
+.navbar-nav a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-font {
+  font-size: 1.1rem;
+}
+
+.nav-center {
+  display: inline-flex;
+  align-items: center;
+}
+
+.navbar-right {
+  margin-left: auto;
+}
+
+span.nav-font {
+  display: inline-flex;
+  align-items: center;
+}
+
+nav a {
+  transition: ease-in-out 0.15s;
+  padding: 7px 8px;
+}
+
+nav a.active {
+  background-color: #f7e600;
+  color: black;
+  border-radius: 0.25rem;
+}
+
+nav a:hover:not(.active) {
+  background-color: #f7e600;
+  color: black;
+  border-radius: 0.25rem;
+}
+
+nav a:active {
+  filter: brightness(0.85);
+}
+
+nav a#logout {
+  margin-left: 1rem;
+  margin-right: 10px;
+  font-size: 1rem;
+  float: right;
+  background-color: #f7e600;
+  border: 1px solid yellow;
+  font-weight: bold;
+  border-radius: 2px;
+  color: #202124;
+  text-decoration: none;
+  padding: 5px;
+}

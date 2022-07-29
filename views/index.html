@@ -1,0 +1,80 @@
+<!-- 레이아웃 로드 -->
+{% extends 'layout.html' %}
+
+<!-- style 적용을 위한 style block -->
+{% block style %}
+<link rel="stylesheet" href="/css/index.css" />
+{% endblock %}
+
+<!-- script 적용을 위한 script block -->
+{% block script %}
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/js/index.js"></script>
+{% endblock %}
+
+<!-- body content block -->
+{% block content %}
+<!-- nav 바에 현재 페이지를 표시하기 위한 JS 코드 -->
+<script>
+  const navs = document.querySelectorAll("nav > div > a.nav-center");
+  navs[0].classList.add("active");
+</script>
+<div class="wrap">
+  <div class="container">
+    <div class="flex_item left_box">
+      <div class="write_box">
+        <form id="form">
+          <!-- 메모 수정 시, 메모 id를 설정하기 위한 hidden input -->
+          <input type="hidden" id="memo_id" />
+          <!-- 메모 제목 입력창 -->
+          <input type="text" id="title" name="title" placeholder="제목" />
+          <!-- 메모 내용 입력창 -->
+          <textarea
+            type="text"
+            id="content"
+            name="content"
+            placeholder="내용"
+          ></textarea>
+          <div id="file">
+            <span>첨부파일</span>
+            <input type="file" id="image" name="image" />
+          </div>
+          <!-- 메모 추가 또는 메모 수정을 위한 버튼 -->
+          <button id="memo_submit">메모 추가</button>
+        </form>
+      </div>
+    </div>
+    <!-- 추가한 메모가 표시되는 메모창 -->
+    <div class="flex_item right_box">
+      <div class="memo_box"></div>
+    </div>
+  </div>
+  <!-- 메모 상세 보기를 위한 팝업 modal 창 -->
+  <!-- 메모의 이미지는 상세 보기 창에서 볼 수 있음 -->
+  <div class="modal_container">
+    <div class="popup-wrap" id="popup">
+      <div class="popup">
+        <div class="popup-head">
+          <span class="head-title">메모 보기</span>
+        </div>
+        <!-- 메모 데이터를 표시하기 위한 body 태그 -->
+        <!-- 메모 제목과 이미지, 메모 내용 표시 -->
+        <div class="popup-body">
+          <div class="body-content">
+            <div id="title"></div>
+            <hr />
+            <div id="file"></div>
+            <div id="content"></div>
+          </div>
+        </div>
+        <!-- 창 닫기 버튼을 추가하기 위한 footer 태그 -->
+        <div class="popup-foot">
+          <span class="pop-btn close" id="close" onclick="closeModal()">
+            <i class="fas fa-times"></i>창 닫기
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
